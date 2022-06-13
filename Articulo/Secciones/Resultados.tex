@@ -1,0 +1,84 @@
+\hfill\break
+\justifying
+El proceso experimental consiste en la replicación de los modelos descritos teóricamente en la sección previa, aplicando inicialmente el método de optimización para el tamaño de la ventana \textit{w} para cada uno de los modelos, y posteriormente midiendo la precisión del modelo utilizando el óptimo valor de \textit{w} para el entrenamiento y fase de predicción con el \textit{dataset} completo \textit{GesturePebbleZ1}.
+
+\hfill\break
+\justifying
+Se decidió por Python como el lenguaje de programación utilizado para la implementación y prueba de los modelos, parte por la gran disponibilidad de bibliotecas relacionadas con modelos de \textit{Machine Learning} y especializadas en la Clasificación de Series de Tiempo, aunque estos tan solo se tomaron como referencia pues la mayoría se desarrolló igualmente.
+
+\hfill\break
+\justifying
+Todos los algoritmo y técnicas utilizadas fueron desarrolladas en módulos de uso particular para la replicación de los modelos en este trabajo, con excepción de la función DBA, la cual si forma parte de la biblioteca nombrada \textit{tslearn} y no se desarrollo directamente. Igualmente a lo que refiere a los modelos clasificadores de machine learning, se implementaron funciones parte de las bibliotecas desarrolladas, encargadas de ejecutar el sencillo algoritmo 1-NN con las variaciones necesarias para la adición de las diferentes funciones de medición con el modelo referencia y el modelo propuesto en el trabajo de reconocimiento de gestos utilizando dispositivos comúnes[13]. La excepción se encuentra en el algoritmo SVC, para el cual se utilizó la función que ofrece scikit-learn, requiriendo únicamente el ingreso de los conjuntos de entrenamiento, conjunto de clases y especificación de parámetros en la fase de entrenamiento, y el vector por predecir para la fase de clasificación.
+
+\hfill\break
+\justifying
+Se puede visitar el GitHub del proyecto donde se encuentran los archivos de la implementación por modelo, programas de prueba para cada una de las técnicas y funciones desarrolladas, el par de bibliotecas con las técnicas y algoritmos(\textit{Libraries} y \textit{LLibraries}), una carpeta con los \textit{dataset} utilizados y finalmente una carpeta de resultados con los datos obtenidos por cada modelo: {\small \underline{https://github.com/LaloValle/Clasificador\_vector\_atributos\_SAX-DTW}} .
+
+\hfill\break
+\justifying
+La implementación del algoritmo DTW en los 3 modelos requirió el aprendizaje del valor óptimo de la ventana para cada uno de los modelos[13], pues como se ha explicado previamente, no existe valor único de \textit{w} que pueda ser intercambiable entre contextos, la forma de los datos y el tamaño del conjunto, son factores que afectan a la universalidad de este valor, y como se explica, el manejo de los datos como la etapa en la que DTW interviene, suele ser distinto para cada modelo.
+
+\hfill\break
+\justifying
+Para ejecutar la técnica de optimización del parámetro \textit{w}, se utilizó el \textit{dataset} \textit{GesturePebbleZ1\_TRAIN}, que consta de un total de 132 entradas considerando un total de 6 etiquetas de clase distintas. La técnica de optimización que se implementa requiere de un modelo estratificado, de forma que después de la estratificación el conjunto de entrenamiento cuenta con un total de 120 entradas, 20 secuencias temporales por cada clase. Los demás parámetros que se consideran comúnes para todos los modelos son el número de iteraciones \textit{N} igual a 10 y \textit{k-Fold Cross Validation} igual a 10.
+
+\hfill\break
+\justifying
+Los límites inferiores y superiores del cálculo de \textit{w}, si cambian en función del modelo y se definieron despues de realizarse una iteración de prueba con un limite superior relativamente alto para identificar el rango de valores donde el modelo aumenta su precisión y para evitar calcular todos los posibles valores de \textit{w}(455,32 y 64 respectivamente para cada modelo) junto con un 10-FCV, repitiendo 10 iteraciones para cada valor de ventana. Los rangos por modelo quedaron de la siguiente forma:
+\begin{itemize}
+	\item DTW 1-NN: $[11,17]$
+	\item SAX-DTW[13]: $[2,8]$
+	\item Atributos SAX-DTW(Propuesto): $[2,10]$
+\end{itemize}
+
+\begin{center}
+	\begin{tabular}{c|c c c}
+		\multicolumn{4}{c}{Optimización del tamaño de ventana \textit{w}} \\ \hline
+		Métodos & Precisión & Tiempo(min) & Valor \textit{w} \\ \hline
+		DTW 1-NN &  85.83\% & 25.28 & \textbf{16} \\
+		SAX-DTW & 89.83\% & 6.28 & \textbf{2} \\
+		Atributos SAX-DTW & \textbf{95.25}\% & 43.45 & \textbf{4} \\
+	\end{tabular}
+	\captionof{table}{Tabla que muestra los resultados obtenidos para cada método con la técnica de optimización del tamaño de ventana \textit{w}.}
+	\label{tabla_optimizacion_w}
+\end{center}
+
+\hfill\break
+\justifying
+En el Cuadro 1 se reportan los resultados obtenidos de la técnica de optimización del valor de la ventana \textit{w}, siendo importante rescatar el reducido tamaño de ventana para el par de métodos que implementan una transformación de espacio a un dominio simbólico mediante SAX, pues la sola traducción de esta valor de ventana en número de operaciones, representa una optimización significativa, pero esto tan solo si no se considera la longitud de las secuencias a las que se les aplica DTW para cada método, pues el uso directo de series de tiempo con 455 valores en longitud, ya es demasiado malo en términos de complejidad para además manejar valores grandes de \textit{w}. Sin embargo dentro su contexto, siempre la optimización del valor del tamaño de ventana, incluso para el método referencia, ofrecerá grandes beneficios a su aplicación sin un \textit{w} correcto.
+
+\hfill\break
+\justifying
+Calculado el parámetro de ventana del algoritmo DTW, los modelos se encuentran en condiciones de realizar la prueba final de precisión en la predicción utilizando ambos \textit{dataset}, \textit{GesturePebbleZ1\_TRAIN} y \textit{GesturePebbleZ1\_TEST} para sus respectivos contextos. Los datos que se reportan se realizaron fijando los parámetros como se muestra a continuación:
+
+\begin{center}
+	\begin{tabular}{c c}
+		\textbf{Parámetros} & \textbf{Valores} \\\hline
+		Tamaño \textit{dataset} entrenamiento & 120 \\
+		Tamaño \textit{dataset} prueba & 150 \\
+		Número de corridas & 10 \\
+		Tamaño de ventana \textit{w} & Aprendido para cada método \\
+		
+	\end{tabular}
+\end{center}
+
+
+\begin{center}
+	\begin{tabular}{c|c c}
+		\multicolumn{3}{c}{Precisión en la predicción} \\ \hline
+		Métodos & Precisión & Tiempo(seg) \\ \hline
+		DTW 1-NN &  75.20\% & 57.91 \\
+		SAX-DTW & 90.33\% & 12.89  \\
+		Atributos SAX-DTW & \textbf{94.06}\% & \textbf{5.181} \\
+	\end{tabular}
+	\captionof{table}{Tabla que muestra los resultados promedio obtenidos en la precisión de la predicción para cada método.}
+	\label{tabla_precisión}
+\end{center}
+
+\hfill\break
+\justifying
+Después de la evaluación final en la que se midió la precisión de los 3 modelos al momento de realizar predicciones, se observa claramente el éxito de los modelos basados en características, destacando el desempeño del modelo propuesto en este trabajo por las mejoras muy superior en la precisión frente al modelo referencial, pero presentando también una diferencia pequeña sin embargo significativa de 4 puntos porcentuales a favor, cuando se compara a la técnica de Mezari y Maglogiannis[13].
+
+\hfill\break
+\justifying
+La optimización durante la etapa de entrenamiento y predicción, es definitivamente el ámbito donde nuestra propuesta de atributos SAX-DTW, lidera y con excelente ventaja, las marcas de tiempo registradas para la predicción de 150 instancias, superando hasta por el doble de rapidez, al segundo método mejor clasificado.

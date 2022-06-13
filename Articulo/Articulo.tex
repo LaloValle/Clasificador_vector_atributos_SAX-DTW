@@ -1,0 +1,157 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+%\usepackage{nopageno}
+\usepackage[top=2cm,bottom=2.5cm,left=1.5cm,right=1.5cm]{geometry}
+
+% Fuente Times New Roman
+\usepackage{newtxtext,newtxmath}
+% Columns Layout
+\usepackage{multicol}
+% Dummy text
+\usepackage{blindtext}
+% Justificar texto
+\usepackage{ragged2e}
+% Packages for tables
+\usepackage{longtable}
+% Images
+\usepackage{graphicx}
+% Minipages captions
+\usepackage{caption}
+\captionsetup{
+	font=small,
+	labelfont=bf,
+	tableposition=top,
+	width=0.72\columnwidth,
+	justification=raggedright
+}
+% Enum configurations
+\usepackage{enumitem}
+% Multiple rows in tables
+\usepackage{multirow}
+
+
+\begin{document}
+	
+	\input{Titulo}
+
+	\begin{multicols}{2}
+		
+		{\small
+			\justifying
+			\textbf{\textit{Resumen}--- Este trabajo presenta un análisis de la efectividad en términos de precisión y tiempo de ejecución, para 3 modelos que implementan el algoritmo DTW, la técnica SAX y modelos clásicos de \textit{machine learning} como \textit{k-NN} y \textit{SVC}, en la tarea de clasificación de series de tiempo. Bajo el contexto de reconocimiento de gestos motrices, se utilizan patrones en términos de fuerzas de aceleración, muestreados en los ejes tridimensionales usando el sensor acelerómetro integrado en dispositivos \textit{wearable} o \textit{smartphones}. Se analiza el desempeño de los modelos con el conjunto de datos \textit{Gesture Pebble}, publicamente disponible en \textit{UCR Time Series Archive}, que se compone por 304 patrones procedente de 4 participantes distintos, representados como series de tiempo de longitud variable de las mediciones de la acelaración en el eje Z para 6 gestos únicos.}
+			
+			\hfill\break
+			\justifying
+			\textbf{\textit{Términos Clave}--- Clasificación de series de tiempo, \textit{Dynamic Time Warping}, \textit{Symbolic Aggregate Approximation}}
+		}
+		
+		\hfill\break
+		\centering
+		I. ~~~~~~ INTRODUCCIÓN
+		
+		\input{Secciones/Introduccion}
+		
+		\hfill\break
+		\centering
+		II. ~~~~~~ TRABAJOS RELACIONADOS
+		
+		\input{Secciones/Trabajos_relacionados}
+		
+		\hfill\break
+		\centering
+		III. ~~~~~~ DESCRIPCIÓN DEL CONJUNTO DE DATOS
+		
+		\input{Secciones/Dataset}
+		
+		\hfill\break
+		\centering
+		IV. ~~~~~~ DEFINICIÓN DE ALGORITMOS Y TÉCNICAS UTILIZADOS
+		
+		\input{Secciones/Algoritmos_tecnicas}
+		
+		\hfill\break
+		\centering
+		V. ~~~~~~ MÉTODOS DE CLASIFICACIÓN
+		
+		\input{Secciones/Metodos}
+		
+		\hfill\break
+		\justifying
+		
+		\hfill\break
+		\centering
+		VI. ~~~~~~ RESULTADOS EXPERIMENTALES
+		
+		\input{Secciones/Resultados}
+		
+		\hfill\break
+		\justifying
+		
+		\hfill\break
+		\centering
+		VII. ~~~~~~ CONCLUSIÓN Y TRABAJO FUTURO
+		
+		\input{Secciones/Conclusion}
+		
+		\hfill\break
+		\justifying
+		
+		\hfill\break
+		\newpage
+		\centering
+		REFERENCIAS
+		
+		\begin{tabular}{p{0.5cm} p{7cm}}
+			\text{[1]} & National Institute on Deafness and Other Communication Disorders,(2017, 03. 06). "La afasia".[En línea]. Disponible en https://www.nidcd.nih.gov/es/espanol/afasia \\ \\
+			
+			\text{[2]} & ''Apraxia", \textit{Instituto Nacional de Trastornos Neurológicos y Accidentes Cerebrovasculares}. 03, 2022.[En línea]. Disponible en https://espanol.ninds.nih.gov/es/trastornos/apraxia \\ \\
+			
+			\text{[3]} & "La Disartria," \textit{American Speech Language Hearing Association}.[En línea]. Disponible en https://www.asha.org/public/speech/Spanish/La-Disartria/ \\ \\
+			
+			\text{[4]} & Ismail Fawaz, H., Forestier, G., Weber, J. et al. Deep learning for time series classification: a review. Data Min Knowl Disc 33, 917–963 (2019). https://doi.org/10.1007/s10618-019-00619-1 \\ \\
+			
+			\text{[5]} & D. Peña, G. C. Tiao, R. S. Tsay, ''Introduction,'' \textit{A Course in Time Serie Analysis}. New York: J. Wiley, 2001, pp. 1. \\ \\
+			
+			\text{[6]} & Lines, J., Bagnall, A. Time series classification with ensembles of elastic distance measures. Data Min Knowl Disc 29, 565–592 (2015). https://doi.org/10.1007/s10618-014-0361-2 \\ \\
+			
+			\text{[7]} & Hoang Anh Dau, Eamonn Keogh, Kaveh Kamgar, Chin-Chia Michael Yeh, Yan Zhu, Shaghayegh Gharghabi , Chotirat Ann Ratanamahatana, Yanping Chen, Bing Hu, Nurjahan Begum, Anthony Bagnall , Abdullah Mueen, Gustavo Batista, \& Hexagon-ML (2019). The UCR Time Series Classification Archive. URL https://www.cs.ucr.edu/~eamonn/time\_series\_data\_2018/ \\ \\
+			
+			\text{[8]} & A. Bagnall, J. Lines, J. Hills and A. Bostrom, "Time-Series Classification with COTE: The Collective of Transformation-Based Ensembles," in IEEE Transactions on Knowledge and Data Engineering, vol. 27, no. 9, pp. 2522-2535, 1 Sept. 2015, doi: 10.1109/TKDE.2015.2416723. \\ \\
+			
+			\text{[9]} & C. J .G. Ayala Aburto, "Guante traductor de señas para sordomudos," Tésis título licenciatura, ESIME, unidad Azcapotzalco,. Ciudad de México, México, 2018. \\ \\
+		\end{tabular}
+			
+		\begin{tabular}{p{0.5cm} p{7cm}}
+			\text{[10]} & E. D. Jiménez Carbajal, G. E. Rivera Taboada, "Sistema de comunicación auditiva para personas con problemas del habla", Tésis para título de licenciatura, ESCOM, Ciudad de México, México, 2013. \\ \\
+			
+			\text{[11]} & D. Vishal, H. M. Aishwarya, K. Nishkala, B. T. Royan and T. K. Ramesh, "Sign Language to Speech Conversion,"(en inglés) 2017 IEEE International Conference on Computational Intelligence and Computing Research (ICCIC), 2017, pp. 1-4, doi: 10.1109/ICCIC.2017.8523832. \\ \\
+			
+			\text{[12]} & M. M. Chandra, S. Rajkumar and L. S. Kumar, "Sign Languages to Speech Conversion Prototype using the SVM Classifier," TENCON 2019 - 2019 IEEE Region 10 Conference (TENCON), 2019, pp. 1803-1807, doi: 10.1109/TENCON.2019.8929356. \\ \\
+			
+			\text{[13]} & Mezari, Antigoni \& Maglogiannis, Ilias. (2017). Gesture recognition using symbolic aggregate approximation and dynamic time warping on motion data. 342-347. 10.1145/3154862.3154927 \\ \\
+			
+			\text{[14]} & M Müller. ''Dynamic Time Warping,'' \textit{Information Retrieval for Music and Motion}, 4. Alemania: Springer, 2007, pp. 69-73. \\ \\
+			
+			\text{[15]} & Sakoe, H., \& Chiba, S. (1978). Dynamic programming algorithm optimization for spoken word recognition. IEEE Transactions on Acoustics, Speech, and Signal Processing, 26(1), 43–49. doi:10.1109/tassp.1978.1163055 \\ \\
+			
+			\text{[16]} & Tan, Chang Wei \& Herrmann, Matthieu \& Forestier, Germain \& Webb, Geoffrey \& Petitjean, François. (2018). Efficient search of the best warping window for Dynamic Time Warping.  \\ \\
+			
+			\text{[17]} & Dau, H.A., Silva, D.F., Petitjean, F. et al. Optimizing dynamic time warping’s window width for time series data mining applications. Data Min Knowl Disc 32, 1074–1120 (2018). https://doi.org/10.1007/s10618-018-0565-y \\ \\
+			
+			\text{[18]} & Krishnamoorthy, V., 2022. Piecewise Aggregate Approximation. [online] Vigne.sh. Available at: <https://vigne.sh/posts/piecewise-aggregate-approx/> [Accessed 10 May 2022]. \\ \\
+		\end{tabular}
+			
+		\begin{tabular}{p{0.5cm} p{7cm}}
+			\text{[19]} & Krishnamoorthy, V., 2022. Symbolic Aggregate Approximation. [online] Vigne.sh. Available at: <https://vigne.sh/posts/symbolic-aggregate-approximation/> [Accessed 10 May 2022].\\ \\
+			
+			\text{[20]} & Petitjean, François \& Ketterlin, Alain \& Gancarski, Pierre. (2011). A global averaging method for dynamic time warping, with applications to clustering. Pattern Recognition. 44. 678-. 10.1016/j.patcog.2010.09.013. \\ \\
+			
+			\text{[21]} & Minnaar, A., 2022. Time Series Classification and Clustering with Python –. [online] AlexMinnar. Available at: <http://alexminnaar.com/2014/04/16/Time-Series-Classification-and-Clustering-with-Python.html> [Accessed 10 May 2022].\\ \\
+			
+			\text{[22]} & Kate, R.J. Using dynamic time warping distances as features for improved time series classification. Data Min Knowl Disc 30, 283–312 (2016). https://doi.org/10.1007/s10618-015-0418-x \\ \\
+			
+		\end{tabular}
+		
+	\end{multicols}
+\end{document}
