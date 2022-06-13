@@ -1,0 +1,27 @@
+\hfill\break
+\justifying
+Analizando los resultados se razona la efectividad y utilidad que cumple la implementación del algoritmo de transformación espacial SAX, resaltando el efecto que tiene sobre la complejidad, la cual sufre una disminución impresionante en comparación al método referencia, a tal punto que los valores para \textit{w} del algoritmo DTW, se mantienen debajo de 5. El constraste de complejidad, se vuelve evidente con el valor de 16 que optimiza el método para el modelo referencia, técnica que no considera en su algoritmo, tratamiento alguno de las series de tiempo que maneja, aportando además al número de cálculos con el valor 16 de \textit{w}, el hecho de que las secuencias con las que se realiza la función de similitud, son de hasta longitud 455, situación irreverente frente a las longitudeds máximas constantes de 32 y 64 para los ultimos 2 modelos implementados.
+
+\hfill\break
+\justifying
+El par de métodos basados en características, encabezado por el algoritmo SAX, se les observa no solo disminuye la complejidad y propicia por lo tanto al tiempo de cálculo, factor importante para las condiciones de la solución que se trabaja; Además, ofrece un aumento en la precisión comparando con el método de refencia que se clasifica como un método basado en distancias, factores que terminan por descartar completamente al de referencia como una técnica viable para el problema de la clasificación de gestos motrices.
+
+\hfill\break
+\justifying
+Durante el análisis de las cifras arrojadas, se notó una discrepancia entre la precisión promedio obtenida en el proceso de aprendizaje del valor óptimo para la ventana \textit{w}, con respecto a la precisión final alcanzada de la evaluación de las predicciones con el conjunto de datos completo \textit{GesturePebbleZ1}. Surgen un par de hipótesis que se consideran en trabajo a futuro como una aclaración de estas diferencias.
+
+\hfill\break
+\justifying
+La primer hipótesis considera que la diferencia entre las cifras se debe a la naturaleza del \textit{dataset}. Para el entrenamiento y aprendizaje del parámetro \textit{w}(que involucra la evaluación de predicciones) se utiliza el archivo de entrenamiento exclusivamente, donde la naturaleza de su construcción fue con patrones desarrollados por los participantes en el lapso de un mismo día durante la sesión 1. Por su parte la evaluación con el archivo de pruebas del mismo \textit{dataset}, se aclara haber sido realizado en una sesión diferente con días de diferencias. En este caso se induce el origen de la diferencia de las mediciones entre la primer sesión(conjunto de entrenamiento) y la segunda(conjunto de pruebas).
+
+\hfill\break
+\justifying
+La segunda hipótesis, capaz de ser comprobada y negar o afirmar la primera planteada, deriva del hecho de que durante el proceso de aprendizaje de \textit{w}, se generan nuevas instancias sintéticas que pudieran tener mucho mayor influencia de la considerada en la variabilidad de los casos de entrenamiento, estimulando una clasificación más general y precisa que resulta en una influencia positiva al modelo. Si este fuera el caso, basta con introducir a la prueba final la técnica de fabricación de conjuntos de entrenamiento con datos nuevos dado por un porcentaje de instancias sintéticas, y evaluando la precisión de predicción, seríamos capaces de identificar la más probable naturaleza del déficit localizado entre porcentajes.
+
+\hfill\break
+\justifying
+Aún con esta observación y a raíz de los resultados obtenidos, se cumplen las expectativas esperadas del modelo de atributos distancia DTW sobre series de tiempo SAX. Siendo capaz de superar a ambos estado del arte, el modelo propuesto cumple, y con excelente rendimiento, las condicionantes de la solución para el desarrollo de una herramienta de calidad.
+
+\hfill\break
+\justifying
+Con este trabajo se muestra el modelo de atributos SAX-DTW, como una excelente alternativa para problemáticas relacionadas a la clasificación de gestos con un enfoque en resultados precisos, pero destacando principalmente en su baja complejidad, rápido cálculo y bajas exigencias de recursos computacionales. De esto se infiere finalmente, que la herencia de las mejores características de ambos algoritmos: SAX y DTW, logran la coexistencia mediante la potenciación sus ventajas propias, con la integración de ambos bajo el marco metodológico planteado en este trabajo.

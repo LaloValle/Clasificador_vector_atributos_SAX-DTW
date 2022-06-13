@@ -1,0 +1,302 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022 - Flatpak) (preloaded format=pdflatex 2022.4.26)  12 JUN 2022 01:32
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Titulo.tex
+(./Titulo.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{center}
+                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--1
+[] 
+ []
+
+
+Overfull \hbox (54.70828pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 M^^Setodo 
+ []
+
+
+Overfull \hbox (35.86496pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 clasi- 
+ []
+
+
+Overfull \hbox (14.39998pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 fi- 
+ []
+
+
+Overfull \hbox (38.79163pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 cador 
+ []
+
+
+Overfull \hbox (16.39165pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 de 
+ []
+
+
+Overfull \hbox (42.67166pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 gestos 
+ []
+
+
+Overfull \hbox (44.41661pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 motri- 
+ []
+
+
+Overfull \hbox (20.98167pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 ces 
+ []
+
+
+Overfull \hbox (25.19995pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 uti- 
+ []
+
+
+Overfull \hbox (50.17491pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 lizando 
+ []
+
+
+Overfull \hbox (18.76498pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 las 
+ []
+
+
+Overfull \hbox (55.85661pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 t^^Secnicas 
+ []
+
+
+Overfull \hbox (33.46666pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 SAX 
+ []
+
+
+Overfull \hbox (8.54999pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 y 
+ []
+
+
+Overfull \hbox (40.41666pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 DTW 
+ []
+
+
+Overfull \hbox (31.36662pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 para 
+ []
+
+
+Overfull \hbox (12.37497pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 la 
+ []
+
+
+Overfull \hbox (29.69997pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 con- 
+ []
+
+
+Overfull \hbox (25.06665pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 for- 
+ []
+
+
+Overfull \hbox (50.17493pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 maci^^Son 
+ []
+
+
+Overfull \hbox (16.39165pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 de 
+ []
+
+
+Overfull \hbox (28.09163pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 vec- 
+ []
+
+
+Overfull \hbox (34.79832pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 tores 
+ []
+
+
+Overfull \hbox (16.39165pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 de 
+ []
+
+
+Overfull \hbox (39.6916pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 atrib- 
+ []
+
+
+Overfull \hbox (14.39998pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 u- 
+ []
+
+
+Overfull \hbox (20.79pt too wide) in paragraph at lines 4--5
+ \OT1/cmr/bx/n/14.4 tos 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 8.
+
+Overfull \hbox (45.03288pt too wide) in paragraph at lines 8--9
+ []\OT1/cmr/bx/it/12 Trabajo 
+ []
+
+
+Overfull \hbox (25.87308pt too wide) in paragraph at lines 8--9
+ \OT1/cmr/bx/it/12 Ter- 
+ []
+
+
+Overfull \hbox (20.57314pt too wide) in paragraph at lines 8--9
+ \OT1/cmr/bx/it/12 mi- 
+ []
+
+
+Overfull \hbox (18.45316pt too wide) in paragraph at lines 8--9
+ \OT1/cmr/bx/it/12 nal 
+ []
+
+
+Overfull \hbox (22.11313pt too wide) in paragraph at lines 8--9
+ \OT1/cmr/bx/it/12 No. 
+ []
+
+
+Overfull \hbox (65.01268pt too wide) in paragraph at lines 8--9
+ []$ 
+ []
+
+
+Overfull \hbox (41.16643pt too wide) in paragraph at lines 12--13
+ []\OT1/cmr/m/it/10 Alumnos: 
+ []
+
+
+Overfull \hbox (27.11095pt too wide) in paragraph at lines 12--13
+ \OT1/cmr/m/it/10 *Valle 
+ []
+
+
+Overfull \hbox (38.99419pt too wide) in paragraph at lines 12--13
+ \OT1/cmr/m/it/10 Mart^^S^^Pnez 
+ []
+
+
+Overfull \hbox (18.79433pt too wide) in paragraph at lines 12--13
+ \OT1/cmr/m/it/10 Luis 
+ []
+
+
+Overfull \hbox (15.47212pt too wide) in paragraph at lines 12--13
+ \OT1/cmr/m/it/10 Ed- 
+ []
+
+
+Overfull \hbox (25.03662pt too wide) in paragraph at lines 12--13
+ \OT1/cmr/m/it/10 uardo 
+ []
+
+
+Overfull \hbox (46.90515pt too wide) in paragraph at lines 16--17
+ []\OT1/cmr/m/it/10 Directores: 
+ []
+
+
+Overfull \hbox (32.33868pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 Rodolfo 
+ []
+
+
+Overfull \hbox (33.48865pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 Romero 
+ []
+
+
+Overfull \hbox (19.82762pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 Her- 
+ []
+
+
+Overfull \hbox (20.1887pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 rera, 
+ []
+
+
+Overfull \hbox (23.39429pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 Jes^^Sus 
+ []
+
+
+Overfull \hbox (22.51099pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 Yalj^^Sa 
+ []
+
+
+Overfull \hbox (33.24423pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 Monti^^Sel 
+ []
+
+
+Overfull \hbox (25.00676pt too wide) in paragraph at lines 16--17
+ \OT1/cmr/m/it/10 P^^Serez 
+ []
+
+
+Overfull \hbox (13.28879pt too wide) in paragraph at lines 20--21
+ []\OT1/cmr/m/it/10 *e- 
+ []
+
+
+Overfull \hbox (21.97766pt too wide) in paragraph at lines 20--21
+ \OT1/cmr/m/it/10 mail: 
+ []
+
+
+Overfull \hbox (124.6757pt too wide) in paragraph at lines 20--21
+ \OT1/cmr/m/it/10 lvallem1400@alumno.ipn.mx 
+ []
+
+)
+! Emergency stop.
+<*> Titulo.tex
+              
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 50 strings out of 478268
+ 740 string characters out of 5847840
+ 291381 words of memory out of 5000000
+ 18348 multiletter control sequences out of 15000+600000
+ 473314 words of font info for 41 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 21i,3n,15p,203b,213s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!

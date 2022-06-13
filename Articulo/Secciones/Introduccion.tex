@@ -1,0 +1,19 @@
+\hfill\break
+\justifying
+Las afecciones del habla e impedimentos en la expresión oral en adultos mayores suele originarse después de haber sufrido una lesión por traumatismo craneoecenfálico o un accidente cerebrovascular que daña principalmente el lóbulo izquierdo del cerebro, derivando principalmente en 3 condiciones médicas, las afasias[1], apraxias[2] y disartrias[3]. Estos tipos de afectaciones al habla resultan en alteraciones del lenguaje, pérdida de la capacidad para la realización de gestos diestros aún cuando se mantiene el deseo y capacidad física de hacerlos, y trastornos en la ejecución motora del habla.
+
+\hfill\break
+\justifying
+En el contexto de esta problemática se plantea un alternativa de solución como una propuesta que tiene por objetivo la creación de una herramienta embebida de apoyo a la comunicación verbal para pacientes en estas condiciones, permitíendoles conformar palabras y texto mediante la replicación de gestos con una mano pertenecientes a un código motriz, desarrollado específicamente para esta solución, que describen a letras del alfabeto y son repducidos sonoramente mediante el uso de un servicio de texto a voz. El desarrollo de la solución se planea como tema de trabajo de titulación a nivel licenciatura para la Ingeniería de Ciencias Computacionales en la Escuela Superior de Computación.
+
+\hfill\break
+\justifying
+De esta solución compete a este documento, el desarrollo de la técnica algorítmica encargada de realizar la tarea de clasificación de los gestos motrices como series dependientes del tiempo, a sus clases alfabéticas. Trabajando en este marco contextual, se toman algunas consideraciones durante la elección del conjunto de datos prueba y el desarrollo experimental, derivado de la guía principal en este trabajo: La replicación de las condiciones bajo las que se desarrollará el proyecto solución con la mayor proximidad posible.
+
+\hfill\break
+\justifying
+Las condiciones de la solución involucran la creación particular de un conjunto de datos con los gestos del código motriz, pendiente de definición en el momento en el que se produce este trabajo, utilizando únicamente el sensor acelerómetro para el muestreo de las fuerzas en los ejes tridimensionales para su uso como instancias de entrenamiento del modelo clasificador. 
+
+\hfill\break
+\justifying
+También tomando relevancia en la elección y análisis de las técnicas algorítmicas evaluadas experimentalmente, aparece la condicionante de los recursos computacionales disponibles en un contexto embebido donde la mayor capacidad de cálculo se concentra en un SoC RaspberryPi 3B+, enfatizando la necesidad de algoritmos de baja complejidad, comparando como ejemplo con alguna solución que involucre redes neuronales o técnicas de \textit{Deep Learning}, que provean resultados de alta precisión sin un gran costo computacional y temporal.
