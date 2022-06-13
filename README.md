@@ -12,20 +12,32 @@ Las bibliotecas requeridas para la ejecución de los modelos o archivos de prueb
 * dtaidistance
 
 ## Estructura del repositorio
-### Artículo
-Este apartado almacena el artículo del proyecto y los archivos requeridos para la compilación del documento en LaTex
-
-### Código
-Archivos fuente y carpetas relacionadas con la ejecución de las funciones y métodos reportados en el artículo
-#### Data
-Archivos con los datos utilizados durante el desarrollo y pruebas de las técnicas y modelos
-#### Libraries
-Archivos fuentes que implementa los algoritmo y técnicas usadas en los modelos(DTW,SAX,Optimización del parámetro *w*,...)
->> **Particularmente esta biblioteca es funcional cuando se manejan arreglos numpy(secuencias temporales de longitud fija)**
-#### LLibraries
-Archivos fuentes que implementa los algoritmo y técnicas usadas en los modelos(DTW,SAX,Optimización del parámetro *w*,...)
->> **Particularmente esta biblioteca es funcional cuando se manejan listas de arreglos numpy(secuencias temporales de longitud variable)**
-#### Results
-Hojas de cálculo utilizadas para realizar el registro de los resultados de cada modelo
-#### Tests
-Archivo fuentes utilizados durante el desarrollo como sencillos programas que prueban la funcionalidad de las funciones
+- **Artículo**
+  
+  Este apartado almacena el artículo del proyecto y los archivos requeridos para la compilación del documento en LaTex
+  
+- **Código**
+  
+  Archivos fuente y carpetas relacionadas con la ejecución de las funciones y métodos reportados en el artículo
+  
+  - **Data**
+    
+    Archivos con los datos utilizados durante el desarrollo y pruebas de las técnicas y modelos
+    
+  - **Libraries**
+    
+    Archivos fuentes que implementa los algoritmo y técnicas usadas en los modelos(DTW,SAX,Optimización del parámetro *w*,...)
+    > > *Particularmente esta biblioteca es funcional cuando se manejan arreglos numpy(secuencias temporales de longitud fija)*
+    
+  - **LLibraries**
+    
+    Archivos fuentes que implementa los algoritmo y técnicas usadas en los modelos(DTW,SAX,Optimización del parámetro *w*,...)
+    > > *Particularmente esta biblioteca es funcional cuando se manejan listas de arreglos numpy(secuencias temporales de longitud variable)*
+    
+  - **Results**
+    
+    Hojas de cálculo utilizadas para realizar el registro de los resultados de cada modelo
+    
+  - **Tests**
+    
+    Archivo fuentes utilizados durante el desarrollo como sencillos programas que prueban la funcionalidad de las funciones
