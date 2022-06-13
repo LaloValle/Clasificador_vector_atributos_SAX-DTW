@@ -10,6 +10,7 @@ Las bibliotecas requeridas para la ejecución de los modelos o archivos de prueb
 * Pandas
 * scikit-learn
 * dtaidistance
+* tslearn
 
 ## Estructura del repositorio
 - **Artículo**
