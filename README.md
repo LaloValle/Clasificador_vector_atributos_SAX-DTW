@@ -11,6 +11,7 @@ Las bibliotecas requeridas para la ejecución de los modelos o archivos de prueb
 * scikit-learn
 * dtaidistance
 * tslearn
+* resampy
 
 ## Estructura del repositorio
 - **Artículo**
