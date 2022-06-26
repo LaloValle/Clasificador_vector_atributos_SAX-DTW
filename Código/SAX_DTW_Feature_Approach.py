@@ -371,12 +371,36 @@ def prediction_performance_test():
     print(ps.DataFrame(results))
     print('<--- Finished with accuracy: {}, in {:.2f} sec --->'.format(acc,ending_time))
 
+def train_save_model(classifier=svm.SVC(),representatives=dict()):
+    import joblib
+
+    if not representatives:
+        # Recovering the trained model and the representatives of each class
+        classifier, representatives = training()
+    filename_model = './Results/Trained_SAX-DTW-F_SVM.sav'; filename_representatives = './Results/Class_representatives.csv'
+    #==================
+    # Saving the model
+    #==================
+    joblib.dump(classifier,filename_model)
+    print('<--- SVM Model saved in Results --->')
+    #==================================
+    # Saving the class representatives
+    #==================================
+    representatives_aux = np.empty((len(representatives),number_words+1))
+    for class_rep,representative in representatives.items():
+        representatives_aux[class_rep-1,0] = class_rep
+        representatives_aux[class_rep-1,1:] = representative
+    np.savetxt(filename_representatives,representatives_aux,delimiter=',')
+    print('<--- Representatives saved in Results --->')
+
 def main():
-    """ classifier,representatives = training()
-    testing(classifier,representatives) """
+    classifier,representatives = training()
+    testing(classifier,representatives)
 
     #minimum_window_size()
     #representative_ploting()
-    prediction_performance_test()
+    #prediction_performance_test()
+
+    train_save_model(classifier,representatives)
 
 if __name__ == '__main__': main()

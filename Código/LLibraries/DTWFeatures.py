@@ -21,14 +21,14 @@ def representatives_by_class(dataset:list,with_initial_barycenter:bool=False):
     
     # If the dataset given is a dictionary then it's already divided by class
     if type(dataset) == dict: aux_dataset = dict(dataset)
-    # Otherwise firts the dataset must be organized by class
+    # Otherwise first the dataset must be organized by class
     else: aux_dataset = group_by_class(dataset)
 
     for label in aux_dataset.keys():
         if with_initial_barycenter:
-            representatives[label] = dtw_barycenter_averaging(aux_dataset[label], max_iter=50, tol=1e-3, init_barycenter=choose_initial_average_series(aux_dataset[label]))
+            representatives[label] = dtw_barycenter_averaging(aux_dataset[label], max_iter=50, tol=1e-3, init_barycenter=choose_initial_average_series(aux_dataset[label])).reshape((-1))
         else:
-            representatives[label] = dtw_barycenter_averaging(aux_dataset[label], max_iter=50, tol=1e-3)
+            representatives[label] = dtw_barycenter_averaging(aux_dataset[label], max_iter=50, tol=1e-3).reshape((-1))
     
     return representatives
 
